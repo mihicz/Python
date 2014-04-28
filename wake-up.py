@@ -44,7 +44,10 @@ def getTime(string):
     #print (i)
 
 l =  len(sys.argv)-1
-if l == 1:
+if l == 0:
+    message = getMessage(input('Enter a message: '))
+    delay = getTime(input('Enter a time delay: '))
+elif l == 1:
     delay = getTime(sys.argv[1])
     message = "Alarm! Wake-up!"
 elif l == 2:
